@@ -45,7 +45,7 @@ git diff --cached
 git diff
 ```
 
-[2.2 Git 基础 - 记录每次更新到仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
+> [2.2 Git 基础 - 记录每次更新到仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
 
 
 - 检查提交的日志
@@ -59,7 +59,7 @@ git log -p -2
 //查看提交日志的统计信息
 git log --stat
 ```
-[2.3 Git 基础 - 查看提交历史](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2)
+> [2.3 Git 基础 - 查看提交历史](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2)
 
 
 - 撤销提交操作
@@ -87,7 +87,7 @@ git checkout -- README.MD
 //保持分支一致
 git checkout master
 ```
-[2.4 Git 基础 - 撤消操作](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C)
+> [2.4 Git 基础 - 撤消操作](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C)
 
 
 - 查看远程仓库
@@ -133,7 +133,6 @@ git push pb
 ```
 //origin表示仓库url别名，比如：gitNick
 git remote show origin
-<<<<<<< HEAD
 ```
 
 - 远程仓库的重命名
@@ -148,7 +147,7 @@ git remote rename gitNick origin
 ```
 git remote rm origin
 ```
-[2.5 Git 基础 - 远程仓库的使用](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8)
+> [2.5 Git 基础 - 远程仓库的使用](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8)
 
 
 - 列出所有标签
@@ -180,7 +179,7 @@ git show v1.4
 git tag v1.4-lw
 ```
 
-[2.6 Git 基础 - 打标签](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE)
+> [2.6 Git 基础 - 打标签](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE)
 
 
 - Git全局别名
@@ -199,7 +198,7 @@ git config --global alias.unstage 'reset HEAD --'
 git config --global alias.last 'log -l HEAD'
 ```
 
-[2.7 Git 基础 - Git 别名](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-Git-%E5%88%AB%E5%90%8D)
+> [2.7 Git 基础 - Git 别名](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-Git-%E5%88%AB%E5%90%8D)
 
 
 - 新建分支
@@ -228,20 +227,58 @@ git merge iss53
 ```
 
 
-- 
+- 遇到冲突时的分支合并
+
+```
+//执行merge操作，提示合并失败
+$ git merge iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+```
+//检查因冲突而处于未合并状态的文件
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+    both modified:      index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+手动打开包含冲突的文件并处理
+```
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
 =======
+<div id="footer">
+ please contact us at support@github.com
+</div>
+>>>>>>> iss53:index.html
 ```
 
-- 远程仓库的重命名
+合并后的分支内容
 
 ```
-//gitNick为原仓库名字，origin为新仓库名字
-git remote rename gitNick origin
+<div id="footer">
+please contact us at email.support@github.com
+</div>
 ```
 
-- 远程仓库的删除
+标记包含冲突的文件为冲突解决
 
 ```
-git remote rm origin
+git add 
 ```
->>>>>>> 07e6750205df2c51e145d3dc386065fa94683474
+
+最后，确认合并提交
+
+```
+git commit
+```
