@@ -1,5 +1,3 @@
-学习Git命令行操作
-
 - 检查当前目录文件状态
 
 ```
@@ -117,3 +115,15 @@ git push pb
 git remote show origin
 ```
 
+- 远程仓库的重命名
+
+```
+//gitNick为原仓库名字，origin为新仓库名字
+git remote rename gitNick origin
+```
+
+- 远程仓库的删除
+
+```
+git remote rm origin
+```
