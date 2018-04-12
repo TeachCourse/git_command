@@ -298,3 +298,40 @@ git add
 git commit
 ```
 > [3.2 Git 分支 - 分支的新建与合并](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6)
+
+
+- 查看分支情况
+
+```
+git branch
+```
+
+
+- 查看分支最后提交情况
+
+```
+git branch -v
+```
+
+
+- 查看已合并到当前分支情况
+
+```
+git branch --merged
+```
+
+
+- 查看未合并分支情况
+
+```
+git branch --no-merged
+```
+
+> [3.3 Git 分支 - 分支管理](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86)
+
+> [3.4 Git 分支 - 分支开发工作流](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81)
+
+> [3.5 Git 分支 - 远程分支](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF)
+
+
+- 
