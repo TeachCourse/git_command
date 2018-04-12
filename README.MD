@@ -96,7 +96,7 @@ git checkout master
 git remote -v
 ```
 
-[](img/20180412143132.jpg)
+![](img/20180412143132.jpg)
 
 
 - 添加远程仓库
@@ -124,7 +124,8 @@ git push https://github.com/teachcourse/git_command
 //pb表示仓库别名（推送失败）
 git push pb
 ```
-[](img/20180412145754.jpg)
+
+![](img/20180412145754.jpg)
 
 
 - 查看远程仓库
@@ -203,10 +204,27 @@ git config --global alias.last 'log -l HEAD'
 - 新建分支
 
 ```
-//创建分支iss53，并切换到该分支
-git checkout -b iss53
-
-//上述命令等同于下面两条命令
 git branch iss53
+```
+
+- 切换分支
+
+```
 git checkout iss53
 ```
+
+- 新建并切换分支
+
+```
+//创建分支iss53，并切换到该分支
+git checkout -b iss53
+```
+
+- 合并分支
+
+```
+git merge iss53
+```
+
+
+- 
