@@ -1,5 +1,3 @@
-学习Git命令行操作
-
 - 检查当前目录文件状态
 
 ```
@@ -27,7 +25,6 @@ git commit
 ```
 git rm note.txt
 ```
-
 [2.2 Git 基础 - 记录每次更新到仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
 
 
@@ -42,7 +39,6 @@ git log -p -2
 //查看提交日志的统计信息
 git log --stat
 ```
-
 [2.3 Git 基础 - 查看提交历史](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2)
 
 
@@ -71,7 +67,6 @@ git checkout -- README.MD
 //保持分支一致
 git checkout master
 ```
-
 [2.4 Git 基础 - 撤消操作](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C)
 
 
@@ -81,7 +76,7 @@ git checkout master
 git remote -v
 ```
 
-[img/20180412143132.jpg]
+[](img/20180412143132.jpg)
 
 
 - 添加远程仓库
@@ -109,6 +104,8 @@ git push https://github.com/teachcourse/git_command
 //pb表示仓库别名（推送失败）
 git push pb
 ```
+[](img/20180412145754.jpg)
+
 
 - 查看远程仓库
 
@@ -117,3 +114,78 @@ git push pb
 git remote show origin
 ```
 
+- 远程仓库的重命名
+
+```
+//gitNick为原仓库名字，origin为新仓库名字
+git remote rename gitNick origin
+```
+
+- 远程仓库的删除
+
+```
+git remote rm origin
+```
+[2.5 Git 基础 - 远程仓库的使用](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8)
+
+
+- 列出所有标签
+
+```
+git tag
+
+//列出符合条件的标签
+git tag -l 'v1.8.*'
+```
+
+- 创建附注标签（annotated）
+
+```
+//-m 后面添加描述的信息
+git tag -a v1.4 -m 'add description infomation'
+```
+
+- 查询标签对应信息
+
+```
+git show v1.4
+```
+
+- 创建轻量标签
+
+```
+//v1.4-lw为轻量标签的名称
+git tag v1.4-lw
+```
+
+[2.6 Git 基础 - 打标签](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE)
+
+
+- Git全局别名
+
+```
+//使用co代替完整的checkout
+git config --global alias.co checkout
+
+git config --global alias.br branch
+
+git config --global alias.ci commit
+
+//对于长的字符串，体现别名的好处
+git config --global alias.unstage 'reset HEAD --'
+
+git config --global alias.last 'log -l HEAD'
+```
+
+[2.7 Git 基础 - Git 别名](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-Git-%E5%88%AB%E5%90%8D)
+
+
+- 新建分支
+
+```
+//创建分支iss53，并切换到该分支
+git checkout -b iss53
+
+git branch iss53
+git checkout iss53
+```
