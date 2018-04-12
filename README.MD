@@ -63,6 +63,15 @@ git commit --amend
 git reset HEAD <file>...
 ```
 
+- 保持本地文件和仓库一致
+
+```
+//双减号后空格，后面文件名
+git checkout -- README.MD
+//保持分支一致
+git checkout master
+```
+
 [2.4 Git 基础 - 撤消操作](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C)
 
 
@@ -91,7 +100,9 @@ git fetch https://github.com/teachcourse/git_command
 - 推送到远程仓库
 
 ```
-//pb表示仓库别名
+//推送成功演示
+git push https://github.com/teachcourse/git_command master
+//pb表示仓库别名（推送失败）
 git push pb master
 ```
 
