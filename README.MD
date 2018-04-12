@@ -133,6 +133,7 @@ git push pb
 ```
 //origin表示仓库url别名，比如：gitNick
 git remote show origin
+<<<<<<< HEAD
 ```
 
 - 远程仓库的重命名
@@ -228,3 +229,19 @@ git merge iss53
 
 
 - 
+=======
+```
+
+- 远程仓库的重命名
+
+```
+//gitNick为原仓库名字，origin为新仓库名字
+git remote rename gitNick origin
+```
+
+- 远程仓库的删除
+
+```
+git remote rm origin
+```
+>>>>>>> 07e6750205df2c51e145d3dc386065fa94683474
