@@ -25,6 +25,26 @@ git commit
 ```
 git rm note.txt
 ```
+
+- 状态简略
+
+```
+git status -ss
+```
+
+- 查看已暂存的文件
+
+```
+//--staged 和 --cached是同义词
+git diff --cached
+```
+
+- 查看未暂存的文件
+
+```
+git diff
+```
+
 [2.2 Git 基础 - 记录每次更新到仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
 
 
@@ -186,6 +206,7 @@ git config --global alias.last 'log -l HEAD'
 //创建分支iss53，并切换到该分支
 git checkout -b iss53
 
+//上述命令等同于下面两条命令
 git branch iss53
 git checkout iss53
 ```
