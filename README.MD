@@ -81,6 +81,9 @@ git checkout master
 git remote -v
 ```
 
+[img/20180412143132.jpg]
+
+
 - 添加远程仓库
 
 ```
@@ -101,9 +104,10 @@ git fetch https://github.com/teachcourse/git_command
 
 ```
 //推送成功演示
-git push https://github.com/teachcourse/git_command master
+git push https://github.com/teachcourse/git_command
+
 //pb表示仓库别名（推送失败）
-git push pb master
+git push pb
 ```
 
 - 查看远程仓库
@@ -112,3 +116,4 @@ git push pb master
 //origin表示仓库url别名，比如：gitNick
 git remote show origin
 ```
+
