@@ -98,5 +98,6 @@ git push pb master
 - 查看远程仓库
 
 ```
+//origin表示仓库url别名，比如：gitNick
 git remote show origin
 ```
