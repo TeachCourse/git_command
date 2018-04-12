@@ -226,6 +226,12 @@ git checkout -b iss53
 git merge iss53
 ```
 
+- 删除分支
+
+```
+//删除分支release
+git branch -d release
+```
 
 - 遇到冲突时的分支合并
 
