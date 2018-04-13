@@ -79,4 +79,30 @@ git reset --hard <commit_id>
 git push origin HEAD --force
 ```
 
+> [撤销修改](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374831943254ee90db11b13d4ba9a73b9047f4fb968d000)
+
+> [版本回退](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000)
+
+
+- 提示`unstaged changes after reset`
+
+解决的办法如下2中办法：
+
+```
+git add .
+git reset --hard
+
+//
+git stash
+git stash drop
+```
+]
+![](img/20180413114958.jpg)
+
+
+- Git合并多个commit
+
+> [合并多个 Commit](https://www.jianshu.com/p/964de879904a)
+
+> [Git 工具 - 重写历史](https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2)
 

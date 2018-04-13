@@ -45,11 +45,31 @@ git diff --cached
 git diff
 ```
 
-- 忽略文件
+- 丢弃工作目录修改的文件
 
 ```
-cat 
+git checkout -- <file>...
 ```
+
+
+- 状态简览
+
+```
+git status -s
+
+ M README
+MM Rakefile
+A  lib/git.rb
+M  lib/simplegit.rb
+?? LICENSE.txt
+```
+
+|字符|含义|
+|----|---|
+|`M`|表示该文件被修改了但是还没放入暂存区
+|`A`|表示该文件被新添加到暂存区
+|`MM`|左边的M表示该文件被修改并添加到了暂存区，右边的M表示该文件被修改但是还没添加到暂存区
+|`??`|表示该文件还没有被跟踪
 
 
 > [2.2 Git 基础 - 记录每次更新到仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
@@ -332,6 +352,3 @@ git branch --no-merged
 > [3.4 Git 分支 - 分支开发工作流](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81)
 
 > [3.5 Git 分支 - 远程分支](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF)
-
-
-- 
