@@ -1,29 +1,22 @@
 本文以`git_command`仓库为例子，演示git命令行的实际用法
 
-## Git 基础
+- Git 基础
 
 |实例|说明|
 |----|---|
 |`git init`<br><br>![](img/20180423100349.jpg)|进入项目根目录，初始化项目添加.git脚本
 |`git status`<br><br>![](img/20180423094833.jpg)|检查当前目录文件状态
 |`git add README.MD`<br><br>![](img/20180423100746.jpg)|添加需要跟踪的文件
-|`git commit -m 'modify README.MD file'`<br><br>![]()|
+|`git commit -m 'modify README.MD file'`<br><br>![](img/20180423101614.jpg)|提交添加跟踪的文件
+|`git commit -a -m 'add all files of untrack'`<br><br>![](img/20180423101906.jpg)|批量添加需要跟踪的文件，并提交
+|`git clone https://github.com/TeachCourse/git_command.git`|将git_command仓库内容克隆到本地
+|`$ git clone https://github.com/TeachCourse/git_command.git GitRepertory`|将git_command仓库内容克隆到本地，并重命名本地仓库名字为GitRepertory
+|`git status -s`<br><br>![](img/20180423103456.jpg)|以紧凑格式，输出当前目录文件状态<br><br>*Note that*：<br><br>MM：第一个M表示文件被修改，没有添加到暂存区；第二个M表示文件被修改，并添加到暂存区<br><br>??：表示新添加的为跟踪的文件<br><br>A：表示新添加到暂存区的文件
+|`cat .gitignore`<br><br>![](img/20180423104611.jpg)|命令行打印指定文件.gitignore内容
+|`git diff`<br><br>![](img/20180423105221.jpg)|比较未暂存文件前后变化的地方（注意：按下Q退出）
+|`git diff --cached`<br><br>![](img/20180423105957.jpg)|比较已暂存文件前后变化的地方
+|``
 
-- 添加未跟踪的文件
-
-```
-//单个文件添加
-git add README.MD
-
-//批量文件添加
-git commit -a -m 'add more files'
-```
-
-- 提交暂存起来的文件
-
-```
-git commit
-```
 
 - 删除某个文件
 
