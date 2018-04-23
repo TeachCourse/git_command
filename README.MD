@@ -6,8 +6,8 @@
 |----|---|
 |`git init`<br><br>![](img/20180423100349.jpg)|进入项目根目录，初始化项目添加.git脚本
 |`git status`<br><br>![](img/20180423094833.jpg)|检查当前目录文件状态
-|`git add README.MD`|
-|`git add`
+|`git add README.MD`<br><br>![](img/20180423100746.jpg)|添加需要跟踪的文件
+|`git commit -m 'modify README.MD file'`<br><br>![]()|
 
 - 添加未跟踪的文件
 

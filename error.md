@@ -106,3 +106,14 @@ git stash drop
 
 > [Git 工具 - 重写历史](https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2)
 
+
+- git log命令退出操作
+
+直接按下键盘英文字母：Q
+
+
+- Git管理SVN代码
+
+> [git-svn：通过git来管理svn代码](https://www.cnblogs.com/h2zZhou/p/6136948.html)
+
+> [Git 与其他系统 - Git 与 Subversion](https://git-scm.com/book/zh/v1/Git-%E4%B8%8E%E5%85%B6%E4%BB%96%E7%B3%BB%E7%BB%9F-Git-%E4%B8%8E-Subversion)
