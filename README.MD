@@ -1,10 +1,15 @@
-- 检查当前目录文件状态
+本文以`git_command`仓库为例子，演示git命令行的实际用法
 
-```
-git status
-```
+## Git 基础
 
-- 添加未跟踪的文件或文件夹
+|实例|说明|
+|----|---|
+|`git init`<br><br>![](img/20180423100349.jpg)|进入项目根目录，初始化项目添加.git脚本
+|`git status`<br><br>![](img/20180423094833.jpg)|检查当前目录文件状态
+|`git add README.MD`|
+|`git add`
+
+- 添加未跟踪的文件
 
 ```
 //单个文件添加
@@ -350,5 +355,24 @@ git branch --no-merged
 > [3.3 Git 分支 - 分支管理](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86)
 
 > [3.4 Git 分支 - 分支开发工作流](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81)
+
+
+- 获取远程应用的完整列表
+
+```
+git ls-remote (remote)
+```
+![](img/20180416165848.jpg)
+
+
+- 获取远程分支的更多信息
+
+```
+git remote show (remote)
+```
+![](img/20180416170059.jpg)
+
+
+
 
 > [3.5 Git 分支 - 远程分支](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF)
