@@ -41,3 +41,5 @@
 |`git remote -v`<br><br>![](img/20180424112344.jpg)|查看远端仓库别名和其对应的URL地址
 |`git remote add gitCommand https://github.com/TeachCourse/git_command.git`<br><br>![](img/20180424112858.jpg)|添加远端仓库别名和其对应的URL地址
 |`git fetch gitCommand`|拉取远端仓库`gitCommand`对应内容到本地仓库，但没有合并（merge），需要手动merge
+|`git push gitNick release`<br><br>![](img/20180424114501.jpg)|将本地仓库内容推送到远端仓库的release分支
+|`git pull gitNick`
