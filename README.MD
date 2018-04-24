@@ -41,3 +41,34 @@
 |`git remote -v`<br><br>![](img/20180424112344.jpg)|查看远端仓库别名和其对应的URL地址
 |`git remote add gitCommand https://github.com/TeachCourse/git_command.git`<br><br>![](img/20180424112858.jpg)|添加远端仓库别名和其对应的URL地址
 |`git fetch gitCommand`|拉取远端仓库`gitCommand`对应内容到本地仓库，但没有合并（merge），需要手动merge
+|`git push gitNick release`<br><br>![](img/20180424114501.jpg)|将本地仓库内容推送到远端仓库的release分支
+|`git pull gitNick release`<br><br>![](img/20180424120156.jpg)|拉取远端仓库`gitNick`对应内容到本地仓库，并自动合并（merge），**区别fetch**
+|`git remote show gitNick`<br><br>![](img/20180424140810.jpg)|查看远端仓库的更多信息
+|`git remote show`<br><br>![](img/20180424141332.jpg)|查看远端仓库的别名信息
+|`git remote rename gitCommand gitUrl`<br><br>![](img/20180424141619.jpg)|重命名远端仓库的别名
+|`git remote rm gitUrl`<br><br>![](img/20180424141837.jpg)|删除远端仓库别名和其对应的URL地址
+|`git tag`<br><br>![](img/20180424142333.jpg)|列出已有的标签信息
+|`git tag -l 'v1.*'`![](img/20180424142609.jpg)|列出符合筛选条件的标签信息
+|`git tag -a v1.2 -m 'current version v1.2'`![](img/20180424142828.jpg)|`-a`表示创建附注标签（annotated）<br><br>`-m`表示添加创建标签的说明
+|`git show v1.2`<br><br>![](img/20180424143300.jpg)|查看指定标签信息和对应的提交信息
+|`git tag v1.2-lw`<br><br>![](img/20180424143544.jpg)|表示创建轻量标签（lightweight），不需要其他参数字段
+|`git tag -a v1.1.2 7d143fd9aa`<br><br>![](img/20180424144202.jpg)|给以前提交历史记录，重新添加附注标签`v1.1.2`
+|`git push gitNick v1.1`<br><br>![](img/20180424144539.jpg)|推送标签`v1.1`到远端仓库
+|`git push gitNick --tags`<br><br>![](img/20180424144806.jpg)|一次性推送所有标签到远端仓库，包括：`v1.1.2`、`v1.2`、`v1.2-lw`
+|`git checkout -b version1.2 v1.2`<br><br>![](img/20180424145259.jpg)|创建新的分支`version1.2`，并将标签`v1.2`版本更新下来（checkout）
+|`git config --global alias.co checkout`|设置`checkout`别名为`co`，简化用法：`git co release`，表示切换到release分支
+|`git config --global alias.br branch`|设置`branch`别名为`br`，简化用法：`git br`，表示查看分支情况
+|`git config --global alias.ci commit`|设置`commit`别名为`ci`，简化用法：`git ci`，表示提交记录
+|`git config --global alias.st status`|设置`status`别名为`st`，简化用法：`git st`，表示查看文件状态
+|`git config --global alias.unstage 'reset HEAD --'`|设置`reset HEAD --`别名为`unstage`，表示取消暂存区文件
+|`git config --global alias.last 'log -1 HEAD'`|设置`log -1 HEAD`别名为`last`，表示查看最新一次提交记录
+
+**参考资料**：
+
+> [获取 Git 仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%8E%B7%E5%8F%96-Git-%E4%BB%93%E5%BA%93)
+> [记录每次更新到仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
+> [查看提交历史](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2)
+> [撤消操作](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C)
+> [远程仓库的使用](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8)
+> [打标签](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE)
+> [Git 别名](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-Git-%E5%88%AB%E5%90%8D)
