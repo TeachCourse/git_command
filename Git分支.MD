@@ -13,12 +13,6 @@
 |`git branch`<br><br>![](img/20180510152126.jpg)|查看当前所有分支，并以列表形式展示
 |`git branch --merged`<br><br>![](img/20180510172835.jpg)|可以肯定没有`*`的分支已合并到当前分支，可以执行`git branch -d`删除掉
 |`git branch --no-merged`<br><br>![](img/20180510173113.jpg)|查看所有包含未合并工作的分支，尝试执行`git branch -d`删除命令会失败<br><br>*Note that：*除非使用了`-D`强制删除选项，并丢失掉该分支修改的操作
-
-
-- 额外知识点
-
-|实例|说明|
-|----|---|
 |`git push origin -d v1.0.0`<br><br>![](img/20180517220941.jpg)|删除远端仓库分支`v1.0.0`（注意与删除本地分支的区别）
 |`git branch -d v1.0.0`<br><br>![](img/20180517221925.jpg)|删除本地分支`v1.0.0`
 |`git push origin -d tag <tagName>`|删除远端仓库标签
