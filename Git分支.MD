@@ -2,6 +2,7 @@
 
 |实例|说明|
 |----|---|
+|`git clone https://github.com/TeachCourse/git_command.git GitRepertory`|将git_command仓库内容克隆到本地，并重命名本地仓库名字为GitRepertory
 |`git branch v1.1.0`<br><br>![](img/20180510112443.jpg)|创建新分支`v1.1.0`
 |`git checkout v1.1.0`<br><br>![](img/20180510112834.jpg)|切换分支`v1.1.0`
 |`git log --oneline --decorate`<br><br>![](img/20180510113444.jpg)|查看HEAD的指向情况

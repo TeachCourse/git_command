@@ -11,7 +11,7 @@
 |`git commit -m 'modify README.MD file'`<br><br>![](img/20180423101614.jpg)|提交添加跟踪的文件
 |`git commit -a -m 'add all files of untrack'`<br><br>![](img/20180423101906.jpg)|批量添加需要跟踪的文件，并提交
 |`git clone https://github.com/TeachCourse/git_command.git`|将git_command仓库内容克隆到本地
-|`$ git clone https://github.com/TeachCourse/git_command.git GitRepertory`|将git_command仓库内容克隆到本地，并重命名本地仓库名字为GitRepertory
+|`git clone https://github.com/TeachCourse/git_command.git GitRepertory`|将git_command仓库内容克隆到本地，并重命名本地仓库名字为GitRepertory
 |`git status -s`<br><br>![](img/20180423103456.jpg)|以紧凑格式，输出当前目录文件状态<br><br>*Note that*：<br><br>MM：第一个M表示文件被修改，没有添加到暂存区；第二个M表示文件被修改，并添加到暂存区<br><br>??：表示新添加的为跟踪的文件<br><br>A：表示新添加到暂存区的文件
 |`cat .gitignore`<br><br>![](img/20180423104611.jpg)|命令行打印指定文件.gitignore内容
 |`git diff`<br><br>![](img/20180423105221.jpg)|比较未暂存文件前后变化的地方（注意：按下Q退出）
